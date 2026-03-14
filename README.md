@@ -19,19 +19,21 @@ This website showcases tailoring collections and provides customers with an easy
 
 ## Project Structure
 
+## Project Structure
+
 Poshaak/
 │
 ├── index.html # Main website page
 ├── styles.css # Custom styling
-├── script.js # JavaScript interactions
+├── script.js # Website interactions
 │
-├── professional.png # Hero / showcase image
-├── Shop.png # Shop related images
-├── Suits.png # Suit collection images
-├── Office.png # Studio images
+├── professional.png # Hero section image
+├── Office.png # Studio / office image
+├── Shop.png # Shop showcase image
+├── Suits.png # Suit collection image
+│
+└── README.md # Project documentation
 
-
----
 
 ## Contact Information
 
