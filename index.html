@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Poshaak Luxury Studio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cbb26a", /* Gold */
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0a0a",
+                        "luxury-charcoal": "#1c1c1c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-background-dark text-slate-100 font-display transition-colors duration-500 overflow-x-hidden">
+<div class="noise-overlay"></div>
+
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header id="navbar" class="fixed top-0 z-50 w-full border-b border-transparent bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4 transition-all duration-300">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2 text-white">
+                <span class="material-symbols-outlined text-primary text-3xl">content_cut</span>
+                <h2 class="text-xl font-black tracking-tighter uppercase flex flex-col font-serif">POSHAAK <span class="text-[10px] block font-light tracking-[0.2em] -mt-1 font-display">THE MEN'S STUDIO</span></h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-white/70 hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors" href="#collections">Collection</a>
+                <a class="text-white/70 hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors" href="#bespoke">Bespoke</a>
+                <a class="text-white/70 hover:text-primary text-xs font-bold uppercase tracking-widest transition-colors" href="#about">Atelier</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <a href="#contact" class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all">
+                    Book Fitting
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main id="hero" class="relative flex-1 flex flex-col items-center justify-center min-h-screen bg-luxury-charcoal overflow-hidden pt-20">
+        <!-- 3D Environment Background -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 parallax-bg opacity-50"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] soft-glow"></div>
+            <!-- Subtle Floor Reflection -->
+            <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent"></div>
+        </div>
+        
+        <div class="container max-w-[1440px] mx-auto px-6 md:px-20 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+            <!-- Text Content -->
+            <div class="flex flex-col gap-8 order-2 lg:order-1 fade-up">
+                <div class="space-y-4">
+                    <span class="inline-block text-primary font-bold tracking-[0.3em] uppercase text-sm">Signature Series 2026</span>
+                    <h1 class="text-6xl md:text-8xl font-serif text-white leading-[0.9] tracking-tighter">
+                        THE ART OF <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-600">TAILORING</span>
+                    </h1>
+                    <p class="text-slate-400 text-lg max-w-md leading-relaxed font-light">
+                        Experience the pinnacle of craftsmanship. Precision in every stitch, luxury in every fiber. A statement of ultimate refinement.
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#collections" class="bg-primary text-background-dark px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-2 group">
+                        Explore Collection
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <a href="#bespoke" class="border border-white/20 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors">
+                        The Bespoke Experience
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-6 pt-8 border-t border-white/10 mt-4">
+                    <div class="flex -space-x-3">
+                        <img class="w-10 h-10 rounded-full border-2 border-luxury-charcoal object-cover" src="./professional.png" alt="Client"/>
+                        <img class="w-10 h-10 rounded-full border-2 border-luxury-charcoal object-cover" src="./professional.png" alt="Client"/>
+                        <img class="w-10 h-10 rounded-full border-2 border-luxury-charcoal object-cover" src="./professional.png" alt="Client"/>
+                    </div>
+                    <p class="text-sm text-slate-400 font-medium font-light">
+                        Joined by <span class="text-white font-semibold">2,400+</span> refined gentlemen.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 3D Floating Suit Display -->
+            <div class="relative flex justify-center items-center order-1 lg:order-2 h-[500px] md:h-[700px] perspective-1000">
+                <div class="relative z-20 w-full h-full flex justify-center items-center preserve-3d floating-suit">
+                    <div class="relative w-[300px] md:w-[450px] aspect-[2/3] group cursor-pointer">
+                        <img class="w-full h-full object-cover rounded-2xl shadow-2xl shadow-primary/20 brightness-110 contrast-110" src="./professional.png" alt="Hyper-realistic tailored suit"/>
+                        
+                        <!-- Floating details tags -->
+                        <div class="absolute top-1/4 -left-8 md:-left-12 bg-black/60 backdrop-blur-md p-3 rounded-xl border border-white/10 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <p class="text-[10px] text-primary uppercase font-bold tracking-tighter">Material</p>
+                            <p class="text-xs text-white">Super 150s Italian Wool</p>
+                        </div>
+                        <div class="absolute bottom-1/3 -right-8 md:-right-12 bg-black/60 backdrop-blur-md p-3 rounded-xl border border-white/10 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            <p class="text-[10px] text-primary uppercase font-bold tracking-tighter">Detail</p>
+                            <p class="text-xs text-white">Hand-stitched Lapel</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 3D Floor Shadow -->
+                    <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-48 h-8 bg-black/80 blur-xl rounded-full scale-150"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer">
+            <span class="text-[10px] text-slate-500 uppercase tracking-[0.4em] font-bold group-hover:text-primary transition-colors">Discover</span>
+            <div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+        </div>
+    </main>
+
+    <!-- Collections Section -->
+    <section id="collections" class="bg-background-dark py-24 pb-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20">
+            <div class="flex items-end justify-between mb-16 fade-up">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-serif text-white tracking-tight">The Tailored Collection</h2>
+                    <p class="text-slate-400 font-light max-w-xl text-lg">Hand-curated pieces from our master tailors. Each garment tells a story of precision and elegance.</p>
+                </div>
+                <button class="hidden md:flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest hover:text-white transition-colors">
+                    View All <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+            
+            <div class="flex overflow-x-auto gap-8 pb-12 snap-x no-scrollbar fade-up delay-100">
+                <!-- Collection Item 1 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-luxury-charcoal">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./Suits.png" alt="Suit Detail"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-8 left-8 right-8 flex justify-between items-center">
+                                <a href="#contact" class="bg-white hover:bg-primary hover:text-background-dark transition-colors text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest block text-center w-full">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-y-2 px-2">
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.2em]">Italian Wool</p>
+                        <h3 class="text-2xl font-serif text-white">Super 150s Midnight</h3>
+                        <p class="text-slate-400 text-sm font-light">A timeless classic for the modern executive.</p>
+                    </div>
+                </div>
+                
+                <!-- Collection Item 2 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-luxury-charcoal">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./professional.png" alt="Suit Detail"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-8 left-8 right-8 flex justify-between items-center">
+                                <a href="#contact" class="bg-white hover:bg-primary hover:text-background-dark transition-colors text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest block text-center w-full">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-y-2 px-2">
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.2em]">Silk Refinement</p>
+                        <h3 class="text-2xl font-serif text-white">Charcoal Silk Blend</h3>
+                        <p class="text-slate-400 text-sm font-light">Unparalleled comfort meeting structural perfection.</p>
+                    </div>
+                </div>
+                
+                <!-- Collection Item 3 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center group">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-luxury-charcoal">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" src="./Shop.png" alt="Suit Detail"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div class="absolute bottom-8 left-8 right-8 flex justify-between items-center">
+                                <a href="#contact" class="bg-white hover:bg-primary hover:text-background-dark transition-colors text-black px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest block text-center w-full">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-y-2 px-2">
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.2em]">Heritage</p>
+                        <h3 class="text-2xl font-serif text-white">Master Craftsmanship</h3>
+                        <p class="text-slate-400 text-sm font-light">Bespoke finishes that define true luxury.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bespoke Process Section -->
+    <section id="bespoke" class="bg-luxury-charcoal py-24 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-20 fade-up">
+                <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">The Process</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-6">Bespoke Tailoring</h2>
+                <p class="text-slate-400 font-light text-lg">An intimate journey from concept to creation. We construct garments that are uniquely yours, meticulously crafted over 50 hours of handiwork.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative before:absolute before:hidden md:before:block before:top-1/2 before:left-0 before:w-full before:h-px before:bg-white/10 before:-translate-y-1/2 z-0">
+                <!-- Step 1 -->
+                <div class="bg-background-dark/80 backdrop-blur-md p-10 rounded-2xl border border-white/5 shadow-2xl relative z-10 fade-up">
+                    <div class="w-16 h-16 bg-primary text-background-dark rounded-full flex items-center justify-center text-xl font-bold font-serif mb-8 mx-auto shadow-[0_0_30px_rgba(203,178,106,0.3)]">01</div>
+                    <h3 class="text-xl font-serif text-center text-white mb-4">Consultation</h3>
+                    <p class="text-slate-400 text-center font-light text-sm">Your vision discussed over whiskey or espresso. Fabric selection from world-renowned mills and taking precise singular measurements.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-background-dark/80 backdrop-blur-md p-10 rounded-2xl border border-white/5 shadow-2xl relative z-10 fade-up delay-100">
+                    <div class="w-16 h-16 bg-primary text-background-dark rounded-full flex items-center justify-center text-xl font-bold font-serif mb-8 mx-auto shadow-[0_0_30px_rgba(203,178,106,0.3)]">02</div>
+                    <h3 class="text-xl font-serif text-center text-white mb-4">The Baste Fitting</h3>
+                    <p class="text-slate-400 text-center font-light text-sm">A "skeleton" of the suit is assembled. This un-finished garment is fitted to your body to ensure the perfect drape and silhouette.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-background-dark/80 backdrop-blur-md p-10 rounded-2xl border border-white/5 shadow-2xl relative z-10 fade-up delay-200">
+                    <div class="w-16 h-16 bg-primary text-background-dark rounded-full flex items-center justify-center text-xl font-bold font-serif mb-8 mx-auto shadow-[0_0_30px_rgba(203,178,106,0.3)]">03</div>
+                    <h3 class="text-xl font-serif text-center text-white mb-4">Final Commission</h3>
+                    <p class="text-slate-400 text-center font-light text-sm">The final hand-stitching, buttonholes, and pressing. You wear the finished garment home, ready to command any room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Atelier Section -->
+    <section id="about" class="bg-background-dark py-32 border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] fade-up">
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-overlay z-10"></div>
+                    <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="./Office.png" alt="Poshaak Studio Interior"/>
+                    <div class="absolute bottom-6 right-6 bg-black/50 backdrop-blur-md px-6 py-3 rounded-xl border border-white/10 z-20">
+                        <p class="font-serif text-white tracking-widest text-sm">EST. 1994</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-8 fade-up delay-100">
+                    <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs">The Atelier</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white leading-tight">Mastery passed through generations.</h2>
+                    <p class="text-slate-400 font-light text-lg leading-relaxed">
+                        Poshaak Luxury Studio was founded on a simple principle: true elegance requires no introduction. Located in the heart of the city, our atelier is a sanctuary for those who appreciate the dying art of bespoke tailoring.
+                    </p>
+                    <p class="text-slate-400 font-light text-lg leading-relaxed">
+                        Every pattern is drafted by hand. Every lapel meticulously rolled. We don't just make clothes; we engineer armor for the modern gentleman.
+                    </p>
+                    
+                    <div class="pt-6">
+                        <img src="./professional.png" alt="Signature" class="h-16 opacity-50 contrast-200 grayscale brightness-200 object-cover w-40"/>
+                        <p class="mt-2 text-xs text-primary uppercase tracking-widest font-bold">Head Tailor & Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Section -->
+    <section id="contact" class="bg-luxury-charcoal py-32 relative">
+        <div class="absolute inset-0 z-0">
+            <img src="./Suits.png" alt="Background" class="w-full h-full object-cover opacity-[0.05] grayscale"/>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-background-dark/60 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] fade-up">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Request a Fitting</h2>
+                    <p class="text-slate-400 font-light">Join us at the studio to begin your bespoke journey.</p>
+                </div>
+                
+                <div class="space-y-8 mt-4 text-left bg-black/50 border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-colors">
+                    <div class="flex items-start gap-5 group">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-serif text-lg mb-2">Poshaak – The Men’s Studio</h3>
+                            <p class="text-slate-400 font-light text-sm leading-relaxed">Shop No 129, Park Ln, opposite Gandhi Statue<br/>Kandoji Bazar, Nallagutta, Ramgopalpet<br/>Secunderabad, Hyderabad, Telangana 500003</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-5 group">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-xl">call</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-serif text-lg mb-2">Phone & WhatsApp</h3>
+                            <div class="flex flex-col gap-1.5 mb-4">
+                                <a href="tel:+919394288690" class="text-slate-400 font-light text-sm hover:text-primary transition-colors w-fit">+91 93942 88690</a>
+                                <a href="tel:+917013201114" class="text-slate-400 font-light text-sm hover:text-primary transition-colors w-fit">+91 70132 01114</a>
+                            </div>
+                            <a href="https://wa.me/919394288690" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 border border-[#25D366]/30 px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all hover:-translate-y-1">
+                                Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-5 group">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-xl">photo_camera</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-serif text-lg mb-2">Instagram</h3>
+                            <a href="https://www.instagram.com/poshaak.hyderabad/" target="_blank" rel="noopener noreferrer" class="text-slate-400 font-light text-sm hover:text-primary transition-colors w-fit block">
+                                @poshaak.hyderabad
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 mt-8 border-t border-white/10 text-center">
+                        <p class="text-xs text-primary font-bold uppercase tracking-[0.2em] opacity-80">Visit our studio for bespoke tailoring and fittings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark py-12 border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-white">
+                <span class="material-symbols-outlined text-primary text-2xl">content_cut</span>
+                <h2 class="text-lg font-black tracking-tighter uppercase font-serif">POSHAAK</h2>
+            </div>
+            
+            <p class="text-slate-500 text-sm font-light">© 2026 Poshaak Luxury Studio. All rights reserved.</p>
+            
+            <div class="flex gap-6">
+                <a href="#" class="text-slate-500 hover:text-primary transition-colors text-sm font-light">Instagram</a>
+                <a href="#" class="text-slate-500 hover:text-primary transition-colors text-sm font-light">Journal</a>
+                <a href="#" class="text-slate-500 hover:text-primary transition-colors text-sm font-light">Terms</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
